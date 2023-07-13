@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Đăng ký</title>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+	<style>
+		body {
+			background-color: #f0f2f5;
+		}
+		form {
+			margin: 50px auto;
+			padding: 20px;
+			width: 500px;
+			background-color: #ffffff;
+			border-radius: 10px;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		input[type="tel"],
+		select,
+		input[type="date"] {
+			width: 100%;
+			padding: 8px;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #FFF;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			float: right;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+	<script>
+		function validateForm() {
+			if (!document.getElementById("agree").checked) {
+				alert("Bạn cần đồng ý với điều khoản và điều kiện của trang web.");
+				return false;
+			}
+		}
+	</script>
+	<style>
+	.custom-input {
+  border: 1px solid #ccc;
+}</style>
+</head>
+<body>
+		
+
+	<form th:action="@{/XLDangKy}" method="post" >
+		<div style="text-align:center;">
+			<h1 style="color:black;">FORM ĐĂNG KÝ</h1>
+			</div>
+		<hr>
+		<label for="username">Tên đăng nhập:</label>
+		<input class="custom-input" type="text" id="username" name="username" required>
+		<input type="hidden" name="from" value="dangky1"/>
+		<label for="password">Mật khẩu:</label>
+		<input type="password" id="password" name="password" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="gmail" required>
+
+		<label for="fullname">Họ và tên:</label>
+		<input type="text" id="fullname" name="fullname" required>
+		
+			<label for="fullname">Tuổi:</label>
+		<input type="text" id="agee" name="agee" required>
+		
+		<p style="color:red" th:text="${loi}"></p>
+		
+	<label>
+		<input type="checkbox" id="agree" name="agree" required> Tôi đồng ý với <a href="#">điều khoản và điều kiện</a> của trang web.
+	</label>
+
+	<input type="submit" value="Đăng ký">
+</form>
+
+</body>
+</html>

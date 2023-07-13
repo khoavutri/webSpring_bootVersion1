@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sách khoa vip</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+	integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+	integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"> <img
+				src="https://wikici.com/Upload/chu-ky/chu-ky-ten-khoa-zula-regulardemo-ttf.jpeg"
+				alt="Bootstrap" height="24">
+			</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/UsQuanLySanPham}">Trang chủ</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Combo
+							giảm giá</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" role="button"
+						data-bs-toggle="dropdown" aria-expanded="false"> Thể Loại </a>
+						<ul class="dropdown-menu">
+			
+							<li><a class="dropdown-item" th:href="@{/UsSelectSPbyTheLoai(tloai='vanhoc')}" >Văn Học</a></li>
+							<li><a class="dropdown-item" th:href="@{/UsSelectSPbyTheLoai(tloai='toanhoc')}" >Toán Học</a></li>
+							<li><a class="dropdown-item" th:href="@{/UsSelectSPbyTheLoai(tloai='khoahoc')}" >Khoa Học</a></li>
+							<li><a class="dropdown-item" th:href="@{/UsSelectSPbyTheLoai(tloai='xahoi')}" >Xã Hội</a></li>
+							<li><a class="dropdown-item" th:href="@{/UsSelectSPbyTheLoai(tloai='khac')}">Khác</a></li>
+							<li><hr class="dropdown-divider"></li>
+							
+						</ul></li>
+					<li class="nav-item"><a class="nav-link disabled">Hết hàng</a>
+					</li>
+				</ul>
+	
+				
+	<form action="#" method="post">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Tài Khoản
+  </button>
+<!--   <ul class="dropdown-menu" name="taikhoanviip"> -->
+<!--     <li ><a class="dropdown-item" th:href="@{/BDSuaThongTin}" >Đổi thông tin</a></li> -->
+<!--   <li ><a class="dropdown-item" th:href="@{/UsBuocDemDoiMatKhau}" >Đổi Mật Khẩu</a></li> -->
+<!--     <li ><a class="dropdown-item" th:href="@{#}" >Xem Đơn Hàng</a></li> -->
+<!--     <li ><a class="dropdown-item" th:href="@{/DangXuat}"  >Đăng Xuất</a></li> -->
+<!--   </ul> -->
+  </form>
+</div>
+				
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar -->
+
+	<!-- Page content -->
+	<div class="container mt-4">
+		<div class="row">
+			<!-- Menu left -->
+			<div class="col-lg-3">
+				<div class="list-group ">
+					<a href="#" class="list-group-item list-group-item-action">
+						Văn ôn Võ Luyện </a> <a href="#"
+						class="list-group-item list-group-item-action">Tiền trảm hậu tấu</a> <a
+						href="#" class="list-group-item list-group-item-action">Tát luyện thành binh
+						</a>
+				</div>
+			</div>
+			<!-- End Menu left -->
+
+			<!-- Slider and Products -->
+			<div class="col-lg-9">
+				<!-- Slider -->
+				<div id="carouselExampleIndicators" class="carousel slide mb-4"
+					data-bs-ride="true">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="0" class="active" aria-current="true"
+							aria-label="Slide 1"></button>
+						
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+						
+				
+						</div>
+						
+					</div>
+					<button class="carousel-control-prev" type="button"
+						data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button"
+						data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				<!-- End Slider -->
+				<!-- Products -->
+		  <div>
+  <style>
+    /* CSS để tạo giao diện */
+    .product-details {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .product-image {
+      width: 300px;
+      height: 300px;
+      margin-right: 20px;
+    }
+
+    .product-info {
+      flex-grow: 1;
+    }
+
+    .product-info h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .product-info p {
+      margin: 5px 0;
+    }
+  </style>
+
+  <style>
+  .product-img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+  }
+</style>
+  
+   <div class="product-details" th:each="li:${lists}">
+  <div class="product-image">
+    <img th:src="@{'/img/SanPham/' + ${li.link}}" alt="Product Image" class="product-img">
+  </div>
+
+  <div class="product-info">
+    <h2 th:text="${li.name}"></h2>
+    <p th:text="'Giá: '+${li.gia} +'(VNĐ)'"></p>
+    <p th:if="${li.theloai=='vanhoc'}">Thể Loại: Văn Học</p>
+    <p th:if="${li.theloai=='toanhoc'}">Thể Loại: Toán Học</p>
+     <p th:if="${li.theloai=='khoahoc'}">Thể Loại: Khoa Học</p>
+      <p th:if="${li.theloai=='xahoi'}">Thể Loại: Xã Hội</p>
+       <p th:if="${li.theloai=='khac'}">Thể Loại: Khác</p>
+    <p th:text="'Số lượng: '+${li.soluong}"></p>
+    <p th:text="${'Mô Tả: '+li.mota}"></p>
+    <p><a th:href="@{/UserXLXoaDonHang(iddh=${li.id})}">Xóa</a></p>
+  </div>
+</div>
+    
+       <div class="product-details" >
+  <div class="product-image">
+   
+  </div>
+  <div class="product-info">
+     <div class="product-button" >
+     <form th:if="${lists != null}" th:action="@{/UsThanhToanDonHang}" method="post">
+  <button  type="submit" class="btn btn-primary">Thanh Toán</button>
+
+    </form>
+  </div>
+  </div>
+</div>
+    
+    
+    
+  </div>
+				<!-- End Products -->
+			</div>
+			<!-- End Slider and Products -->
+		</div>
+	</div>
+	<!-- End Page content -->
+
+	
+	
+	
+	
+</body>
+</html>

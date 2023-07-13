@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chi tiết sản phẩm</title>
+  <style>
+    /* CSS để tạo giao diện */
+    .product-details {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .product-image {
+      width: 300px;
+      height: 300px;
+      margin-right: 20px;
+    }
+
+    .product-info {
+      flex-grow: 1;
+    }
+
+    .product-info h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .product-info p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-details">
+ <p> CẢM ƠN BẠN ĐÃ ĐẶT HÀNG !</p>
+ <p th:text="'SỐ TIỀN CẦN THANH TOÁN: '+${tientien}+'(VNĐ)'"></p>
+  </div>
+</body>
+</html>
